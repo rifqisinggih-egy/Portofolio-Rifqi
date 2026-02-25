@@ -36,9 +36,7 @@ contactForm.addEventListener("submit", function (event) {
   // note : %0A untuk membuat baris baru (Enter)
   const noWa = "628992247100";
   const pesan =
-    `hello buddy my name is ${nama} %0A%0A` +
-    `My email ${mail} %0A` +
-    `I really intrested with your coffee journey`;
+    `hi my name is ${nama} %0A` + `My email ${mail} %0A%0A` + `how's life ?`;
 
   const url = `https://wa.me/${noWa}?text=${pesan}`;
 
