@@ -157,7 +157,8 @@ body {
 .education,
 .experience,
 .certificate,
-.tools {
+.tools,
+.last-word {
   padding: 8rem 7% 1.4rem;
 }
 
@@ -521,6 +522,20 @@ certif-1:active {
   font-weight: 600;
 }
 /* tools end */
+.last-word h3 {
+  color: var(--primary);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.last-word p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
 
 /* contact start */
 .contact {
