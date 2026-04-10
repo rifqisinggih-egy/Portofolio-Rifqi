@@ -156,6 +156,7 @@ body {
 .about,
 .education,
 .experience,
+.projects,
 .certificate,
 .tools,
 .last-word {
@@ -166,6 +167,7 @@ body {
 .education h2,
 .contact h2,
 .experience h2,
+.projects h2,
 .tools h2,
 .certificate h2 {
   text-align: center;
@@ -424,6 +426,80 @@ body {
 }
 
 /* experience end */
+
+/* AI Project */
+.projects {
+  padding: 8rem 7% 1.4rem;
+  background-color: var(--bg);
+}
+
+.projects-container {
+  display: flex;
+  gap: 15px; /* Jarak antar kolom */
+  width: 100%;
+  align-items: stretch;
+}
+
+.project-left-column {
+  flex: 1.5; /* Lebih lebar dari sisi kanan */
+  display: flex;
+  flex-direction: column; /* Tumpuk ke bawah */
+  gap: 15px; /* Jarak antara video Arsenal dan gambar kopi */
+}
+
+/* Sisi Kiri (Video Utama) */
+.item-main {
+  flex: 2; /* Mengambil ruang 2x lebih besar */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.item-main video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Video memenuhi area tanpa distorsi */
+}
+
+/* Sisi Kanan (Subgrid) */
+.project-subgrid {
+  flex: 1; /* Mengambil ruang lebih kecil */
+  display: flex;
+  flex-direction: column; /* Menumpuk ke bawah */
+  gap: 15px;
+}
+
+.project-item {
+  position: relative; /* Menjaga konteks posisi */
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: transparent; /* Ubah dari white ke transparent agar tidak ada putih-putih */
+  display: flex; /* Memastikan container fleksibel */
+}
+
+/* Proporsi khusus agar sisi kiri terlihat dinamis */
+.project-left-column .item-main {
+  flex: 1.5; /* Video Arsenal dibuat lebih panjang */
+}
+
+.project-left-column .item-new {
+  flex: 1; /* Gambar pegangkopi sebagai penyeimbang di bawah */
+}
+
+.project-subgrid .project-item {
+  width: 100%;
+  aspect-ratio: 4 / 5; /* Anda bisa ubah ke 1/1 (kotak) atau 9/16 (portrait) */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-subgrid .project-item video,
+.project-subgrid .project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* AI Project end */
 
 /* certtificate start */
 .certificate .row {
@@ -854,6 +930,18 @@ footer .credit a {
 
   .exp-item::before {
     left: -2.4rem; /* Sesuaikan ulang posisi titik */
+  }
+
+  .projects-container {
+    flex-direction: column; /* Tumpuk ke bawah di layar kecil */
+  }
+
+  .item-main {
+    height: 400px;
+  }
+
+  .project-subgrid {
+    height: 900px; /* Atur tinggi total untuk 3 item di bawahnya */
   }
 
   .tools .row {
